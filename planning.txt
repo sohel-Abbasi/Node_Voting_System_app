@@ -1,0 +1,46 @@
+------------- Planning for Vote Application -----------------------
+ ---> what ??
+
+
+
+
+
+folders ->
+      models ->
+----------------------------------------------------
+      Routes ->
+         |->  user Authentication :
+            |--> /signup: POST - Create a new user account
+            |--> /login: POST - Log in to an existing account.[adhar card number + password]
+
+          |--> Voting:
+             |--> /candidates: GET - get the list of candidates.
+             |--> /votes/:candidateId: POST - vote for a specific candidate
+         
+          |--> Vote count:
+             |--> /vote/counts: GET - get the list of candidates sorted by their vote count
+
+          |--> User profiles:
+              |--> /profile: GET - get the user's profile information
+              |--> /profile/password: PUT - change the user's password
+
+          |--> Admin Candidate Management:
+              |--> /candidates: POST - create a new candidate
+              |--> /candidates/:candidateId: PUT - update an existing candidate
+              |--> /candidates/:candidateId: DELETE -  Delete a candidate from        
+              the list
+------------------------------------------------------------
+
+some feature we build in an Application
+
+features -->
+
+1. user sign in / sign up
+2. see the list of all candidates.
+3. vote one of the candidate,after voting, user can't  vote again.
+4. there is a route which shows the list of candidates and their live votes count sorted by their vote count.
+5. user data must contain their one unique government id proof  -> Adhar card number
+6. there should be one admin who can only maintain the table of candidates and he can't able to vote at all.
+7. user can change their password.
+8. user can login only with adhar card number and password only.
+9. Admin can't vote at all
