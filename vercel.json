@@ -1,5 +1,15 @@
 {
   "version":2,
   "builds": [{"src":"./server.js","use":"@vercel/node"}],
- "routes": [{"src":"/(.*)","dest":"/"}]
+ "routes": [{"src":"/(.*)","dest":"/"}],
+  "env": {
+    "PORT": "3000",
+    "MONGODB_LOCAL_URL": "mongodb://localhost:27017/VoteApp",
+    "MONGODB_LIVE_URL": "mongodb+srv://khansohail7963:J7N1F9DSXv2acV11@cluster0.ot9d22p.mongodb.net/",
+    "JWT_SECRET": "12345"
+  },
+  "build": {
+      "build": "nodemon server.js",
+    "start": "node server.js"
+  }
 }
