@@ -44,3 +44,45 @@ features -->
 7. user can change their password.
 8. user can login only with adhar card number and password only.
 9. Admin can't vote at all
+
+
+Here are the URLs you can use in Postman based on your API routes:
+User Routes
+1. Signup
+Method: POST
+URL: http://localhost:3000/user/signup
+
+Login
+Method: POST
+URL: http://localhost:3000/user/login
+
+3. Profile
+Method: GET
+URL: http://localhost:3000/user/profile
+Update Password
+Method: PUT
+URL: http://localhost:3000/user/profile/password
+
+Candidate Routes
+1. Add Candidate (Admin only)
+Method: POST
+URL: http://localhost:3000/candidate
+2. Update Candidate (Admin only)
+Method: PUT
+URL: http://localhost:3000/candidate/:candidateID (replace :candidateID with actual ID)
+Delete Candidate (Admin only)
+Method: DELETE
+URL: http://localhost:3000/candidate/:candidateID (replace :candidateID with actual ID)
+4. Vote for Candidate
+Method: POST
+URL: http://localhost:3000/candidate/vote/:candidateID (replace :candidateID with actual ID)
+5. Get Vote Count
+Method: GET
+URL: http://localhost:3000/candidate/votes/count
+6. Get Candidates List
+Method: GET
+URL: http://localhost:3000/candidate/candidatesList
+General
+Home Page
+Method: GET
+URL: http://localhost:3000/
